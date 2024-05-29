@@ -11,7 +11,7 @@ function HomePage() {
 
   return (
     <div className="flex flex-col bg-gray-50">
-      <Section isTopNav={true} title={Config.uiMasterData.section.flash_sale}>
+      <Section isTopNav={true} isScroll={true} title={Config.uiMasterData.section.flash_sale}>
         {products.map((p) => (
           <ProductCard
             id={p.id}

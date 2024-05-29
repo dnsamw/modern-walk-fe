@@ -24,6 +24,11 @@ export const dummy_categories = [
     category: "female",
     text: "Women's Clothing",
   },
+  {
+    id: 3,
+    category: "kids",
+    text: "Children's Clothing",
+  },
 ];
 
 export const dummy_products = [
@@ -46,6 +51,15 @@ export const dummy_products = [
     thumbnail: "/img/tshirt-f.png",
   },
   {
+    id: 5,
+    name: "Kid's Dress",
+    price: 59.99,
+    description:
+      "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk",
+    category: "kids",
+    thumbnail: "/img/gown-k.png",
+  },
+  {
     id: 3,
     name: "Men's Cotton Jacket",
     price: 59.99,
@@ -62,5 +76,13 @@ export const dummy_products = [
       "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk",
     category: "female",
     thumbnail: "/img/tshirt-f.png",
+  }, {
+    id: 6,
+    name: "Kid's Dress",
+    price: 59.99,
+    description:
+      "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk",
+    category: "kids",
+    thumbnail: "/img/gown-k.png",
   },
 ];

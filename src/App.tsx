@@ -5,6 +5,7 @@ import Root from "./pages/Root";
 import ErrorPage from "./pages/ErrorPage";
 import ProductPage from "./pages/ProductPage";
 import { DataProvider } from "./app/context/DataContext";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +22,10 @@ function App() {
         {
           path: "/product/:id",
           element: <ProductPage />,
+        },
+        {
+          path: "/category/:slug",
+          element: <CategoryPage />,
         },
       ],
     },
