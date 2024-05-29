@@ -6,9 +6,7 @@ import CategoryCard from "../components/CategoryCard";
 import { Category, Product } from "../dummy_products";
 import DataContext from "../app/context/DataContext";
 
-type Props = {};
-
-function HomePage({}: Props) {
+function HomePage() {
   const { products, categories } = useContext(DataContext);
 
   return (
@@ -16,6 +14,7 @@ function HomePage({}: Props) {
       <Section isTopNav={true} title={Config.uiMasterData.section.flash_sale}>
         {products.map((p) => (
           <ProductCard
+            id={p.id}
             name={p.name}
             price={p.price.toString()}
             imgUrl={p.thumbnail}
