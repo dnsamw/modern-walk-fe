@@ -10,7 +10,7 @@ function HomePage() {
   const { products, categories } = useContext(DataContext);
 
   return (
-    <div className="flex flex-col bg-gray-50">
+    <>
       <Section isTopNav={true} isScroll={true} title={Config.uiMasterData.section.flash_sale}>
         {products.map((p) => (
           <ProductCard
@@ -28,7 +28,7 @@ function HomePage() {
           <CategoryCard text={c.text} category={c.category} />
         ))}
       </Section>
-    </div>
+    </>
   );
 }
 

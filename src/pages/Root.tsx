@@ -1,16 +1,9 @@
-import { Outlet } from "react-router-dom"
-import { Config } from "../app/config"
-import NavBar from "../components/NavBar"
+import CommonLayout from "../layouts/CommonLayout";
 
-type Props = {}
+type Props = {};
 
 const Root = ({}: Props) => {
-  return (
-    <>
-    <NavBar brand={Config.uiMasterData.siteBrand} />
-    <Outlet/>
-    </>
-  )
-}
+  return <CommonLayout />;
+};
 
-export default Root
+export default Root;

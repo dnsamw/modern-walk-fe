@@ -19,6 +19,7 @@ function ProductCard({
   category,
   name,
 }: Props) {
+  
   const color = colorMap[category as CATEGORY];
 
   return (
