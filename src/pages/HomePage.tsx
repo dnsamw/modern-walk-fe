@@ -11,7 +11,8 @@ function HomePage() {
 
   return (
     <>
-      <Section isTopNav={true} isScroll={true} title={Config.uiMasterData.section.flash_sale}>
+      <Section isScroll={true} title={Config.uiMasterData.section.flash_sale}>
+        <div className="mt-8 flex gap-10">
         {products.map((p) => (
           <ProductCard
             id={p.id}
@@ -22,6 +23,7 @@ function HomePage() {
             category={p.category}
           />
         ))}
+        </div>
       </Section>
       <Section title={Config.uiMasterData.section.categories}>
         {categories.map((c) => (
