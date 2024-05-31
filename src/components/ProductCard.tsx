@@ -23,8 +23,9 @@ function ProductCard({
   const color = colorMap[category as CATEGORY];
 
   return (
+    <div className="w-[330px] md:min-w-[350px] max-w-[60%]">
     <Link to={`/product/${id}`}>
-      <div className="min-w-[330px] md:min-w-[350px] max-w-[60%] flex flex-col justify-between min-h-[600px] rounded-3xl overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:bg-gray-100 xl:max-w[100%]">
+      <div className="flex flex-col justify-between min-h-[600px] rounded-3xl overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:bg-gray-100 xl:max-w[100%]">
         
         <div className="font-bold text-4xl md:text-3xl px-4 pt-10 mb-2 text-center text-gray-900">
           {name}
@@ -57,6 +58,7 @@ function ProductCard({
         </div>
       </div>
     </Link>
+    </div>
   );
 }
 

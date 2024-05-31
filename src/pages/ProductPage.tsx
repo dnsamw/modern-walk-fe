@@ -1,7 +1,8 @@
-import { useOutletContext, useParams } from "react-router-dom";
+import { Link, useOutletContext, useParams } from "react-router-dom";
 import { Product } from "../dummy_products";
 import Section from "../components/Section";
 import { colorMap } from "../app/config";
+import Button from "../components/atoms/Button";
 
 type Props = {};
 
@@ -24,7 +25,12 @@ function ProductPage({}: Props) {
     <div className="flex justify-center items-center min-h-full h-screen bg-white">
       <section>
         <div className="relative w-[100%] bg-gray-50 rounded-3xl h-[100%] flex p-8 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-          <div className="px-4 py-2 absolute text-xl font-semibold text-white flex justify-center items-center rounded-3xl" style={{backgroundColor:colorMap[category]}}>{category.toLocaleUpperCase()}</div>
+
+          <div className="px-4 py-2 absolute text-xl font-semibold text-white flex justify-center items-center rounded-3xl" style={{backgroundColor:colorMap[category]}}>
+          <Link to={`/category/${category}-clothing`}>
+            {category.toLocaleUpperCase()}
+          </Link>
+            </div>
           <div className="flex w-[50%] justify-center items-center">
             <img className="w-[75%]" src={thumbnail} alt={name} />
           </div>
@@ -53,7 +59,7 @@ function ProductPage({}: Props) {
             <div className="PURCHASE flex justify-between  border-t-2 border-gray-300 py-4">
               Rs {price}
               <div className="flex gap-2">
-                <button>Buy</button>
+                <Button text="Buy" />
                 <span>Like</span>
               </div>
             </div>
